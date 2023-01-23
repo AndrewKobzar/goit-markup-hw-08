@@ -1,0 +1,17 @@
+@import './utils/utils';
+@import './utils/variables';
+
+@import './components/section/header';
+@import './components/section/hero.scss';
+@import './components/section/features';
+@import './components/section/work';
+@import './components/section/ourteam';
+@import './components/section/client';
+@import './components/section/footer';
+
+
+@import './components/portfolio/filter';
+@import './components/portfolio/examples';
+
+
+@import './components/modal/modal';
