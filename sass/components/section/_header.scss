@@ -1,10 +1,14 @@
 .header {
     border-bottom: 1px solid #ececec;
   }
-  .container.nav {
-    display: flex;
+ .nav {
+    display: none;
     text-align: center;
     align-items: center;
+    @media screen and (min-width: 768px) { 
+      display: flex;
+      }    
+    
   }
   
   .logo {
@@ -12,21 +16,28 @@
     color: $hover-text-color;
     font-family: "raleway";
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     padding-top: 24px;
     padding-bottom: 25px;
-    margin-right: 93px;
+    margin-right: 88px;
+    @media screen and (min-width: 1200px){
+      margin-right: 93px;
+      font-size: 26px;
+    }
      span {
         color: $logo;
         padding-top: 24px;
         padding-bottom: 25px;
         font-family: "Raleway";
         font-weight: 700;
-        font-size: 26px;
+        font-size: 24px;
         line-height: 1.19;
         letter-spacing: 0.03em;
+        @media screen and (min-width: 1200px){
+          font-size: 26px;
+        }
       }
   }
   
@@ -34,6 +45,7 @@
   
   .site-nav {
     display: flex;
+    
   }
   
 
@@ -43,7 +55,7 @@
     position: relative;
     margin-right: 50px;
     &:last-child {
-        margin-right: 0;
+        margin-right: 96px;
       }
       
   } 
@@ -78,19 +90,28 @@
   
 
 .auth-nav.list {
-  display: flex; 
+  display: flex;
+  flex-wrap: wrap; 
   align-content: center;
   margin-left: auto;
-  gap: 30px;
+  gap: 10px;
+  @media screen and (min-width: 1200px){
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
   & .link {
     display: flex;
     align-items: center;
     gap: 10px;
     color: $title-text-color;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (min-width: 1200px){
+      font-size: 14px;
+    }
     &:hover,
     &:focus {
       color: $hover-text-color;
@@ -103,6 +124,139 @@
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   
-
+.relative {
+  position: relative;
+}
   
+  .mob-menu-open {
+position: absolute;
+top: 10px;
+right: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    @media screen and (min-width: 768px) { 
+      display: none;
+      } 
+  }
+
+  .mob-menu-close {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .mob-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+  }
+
+  .mob-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+
+
+  .mob-nav-item .link {
+    font-weight: 500;
+font-size: 40px;
+line-height: 47px;
+letter-spacing: 0.02em;
+
+color: #212121;
+  }
+
+  .mob-nav-item {
+    margin-bottom: 32px;
+  }
+  .mob-nav-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .mob-auth-nav .link-tel {
+    font-weight: 500;
+font-size: 34px;
+line-height: 40px;
+letter-spacing: 0.02em;
+
+color: #2196F3;
+  }
+
+  .mob-auth-nav .link-mail {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
+    
+    color: #757575;
+  }
+
+  .logo-mob-menu {
+    display: inline-block;
+    color: $hover-text-color;
+    font-family: "raleway";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-right: 93px;
+     span {
+        color: $logo;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-family: "Raleway";
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.16;
+        letter-spacing: 0.03em;
+      }
+    @media screen and (min-width: 768px) { 
+      display: none;
+      } 
+      
+  }
+
+
+  .mob-auth-nav:last-child{
+    margin-top: 32px;
+  }
+
+  .mob-soc-list {
+    margin-top: 64px;
+    display: flex;
+  }
+
+  .mob-soc-link {
+    font-weight: 500;
+font-size: 18px;
+line-height: 1.22;
+letter-spacing: 0.02em;
+color: #2196F3;
+  }
+
+  .mob-soc-link::after {
+    content: '';
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .mob-soc-link.link::after {
+    content: '';
+      border: none;
+    }
   

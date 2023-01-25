@@ -19,51 +19,101 @@
     <link rel="stylesheet" href="./css/main.min.css"/>
   </head>
   <body class="font-family">
-    <!-- <header class="header">
-      <nav class="container nav">
-        <a href="./index.html" class="logo">Web<span>Studio</span></a>
-
-        <ul class="site-nav list">
-          <li class="item">
-            <a href="./index.html" class="link current">Студія</a>
-          </li>
-          <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
-          <li class="item"><a href="" class="link">Контакти</a></li>
-        </ul>
-        <ul class="auth-nav list">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="link"
-              ><svg class="mail" width="16" height="12">
-                <use href="./images/icon.svg#icon-mail"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="item">
-            <a class="link" href="tel:+380961111111"
-              ><svg class="mail" width="10" height="16">
-                <use href="./images/icon.svg#icon-tel"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </header> -->
+    <header class="header">
+      <div class="container relative">
+        <a href="./index.html" class="logo-mob-menu">Web<span>Studio</span></a>
+        <nav class="container nav">
+          <a href="./index.html" class="logo">Web<span>Studio</span></a>
+          <ul class="site-nav list">
+            <li class="item">
+              <a href="./index.html" class="link current">Студія</a>
+            </li>
+            <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+            <li class="item"><a href="" class="link">Контакти</a></li>
+          </ul>
+          <ul class="auth-nav list">
+            <li class="item">
+              <a href="mailto:info@devstudio.com" class="link"
+                ><svg class="mail" width="16" height="12">
+                  <use href="./images/icon.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="item">
+              <a class="link" href="tel:+380961111111"
+                ><svg class="mail" width="10" height="16">
+                  <use href="./images/icon.svg#icon-tel"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+        </nav>
+        
+          <button type="button" class="mob-menu-open" data-menu-open><svg class="icon-menu" width="40" height="40">
+            <use href="./images/icon.svg#icon-menu"></use>
+          </svg></button>
+                
+                <div class="mob-menu is-hidden" data-menu>
+          <button type="button" class="mob-menu-close" data-menu-close><svg class="icon-menu-close" width="19" height="19">
+            <use href="./images/icon.svg#icon-close"></use>
+          </svg></button>
+                
+          <div class="mob-container">
+            <div class="mob-top">
+              <ul class="mob-nav list">
+                <li class="mob-nav-item">
+                  <a href="./index.html" class="link current">Студія</a>
+                </li>
+                <li class="mob-nav-item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+                <li class="mob-nav-item"><a href="" class="link">Контакти</a></li>
+              </ul>
+            </div>
+            <div class="mob-bottom">
+              <ul class="mob-auth-nav list">
+                <li class="mob-auth-nav">
+                  <a class="link-tel" href="tel:+380961111111"
+                    ><svg class="mail" width="10" height="16">
+                      <use href="./images/icon.svg#icon-tel"></use>
+                    </svg>
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-auth-nav">
+                  <a href="mailto:info@devstudio.com" class="link-mail"
+                    ><svg class="mail" width="16" height="12">
+                      <use href="./images/icon.svg#icon-mail"></use>
+                    </svg>
+                    info@devstudio.com</a
+                  >
+                </li>
+                          </ul>
+                          <ul class="mob-soc-list">
+                            <li class="mob-soc-item"><a class="mob-soc-link" href="">Instagram</a></li>
+                            <li class="mob-soc-item"><a class="mob-soc-link" href="">Twitter</a></li>
+                            <li class="mob-soc-item"><a class="mob-soc-link" href="">Facebook</a></li>
+                            <li class="mob-soc-item"><a class="mob-soc-link link" href="">LinkedIn</a></li>
+                          </ul>
+            </div>
+          </div>
+          </div>
+        </div>
+    </header>
     <main>
       <!-- Шапка -->
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
           <button class="hero__button" type="button" data-modal-open>
             Замовити послугу
           </button>
         </div>
-      </section> -->
+      </section>
 
       <!-- Особенности -->
 
-      <!-- <section class="section features">
+      <section class="section features">
         <div class="container">
           <h2 class="features__title">Переваги</h2>
           <ul class="grid">
@@ -96,11 +146,11 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Чим ми займаємося -->
 
-      <!-- <section class="section work">
+      <section class="section work">
         <div class="container">
           <h2 class="work__titel">Чим ми займаємося</h2>
           <ul class="work__list">
@@ -118,7 +168,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Наша команда -->
 
@@ -211,7 +261,12 @@
               </div>
             </li>
             <li class="command-item">
-              <img
+              <picture>
+                <source srcset="./images/img-mob-2.jpg 1x,
+                ./images/img-mob-2-2x.jpg 2x" 
+                media="(min-width: 480px)">
+              </picture>
+              <img 
                 class="photo"
                 src="./images/img-3.jpg"
                 width="270"
@@ -297,7 +352,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="section client">
+      <section class="section client">
         <div class="container">
           <h2 class="client-title">Постійні клієнти</h2>
           <ul class="client-list">
@@ -345,64 +400,66 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container flex">
-        <div class="footer-adress">
-          <a href="./index.html" class="logo-footer">Web<span>Studio</span></a>
-          <address class="adress">
-            <ul class="footer-list">
-              <li class="item">
-                <a
-                  href="https://www.google.com/maps/search/леси+украинки+26/@50.3904957,30.3537571,13.4z"
-                  class="map"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
+        <div class="footer-flex">
+          <div class="footer-adress">
+            <a href="./index.html" class="logo-footer">Web<span>Studio</span></a>
+            <address class="adress">
+              <ul class="footer-list">
+                <li class="item">
+                  <a
+                    href="https://www.google.com/maps/search/леси+украинки+26/@50.3904957,30.3537571,13.4z"
+                    class="map"
+                    >м. Київ, пр-т Лесі Українки, 26</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="mailto:info@devstudio.com" class="link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li>
+                  <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="network">
+            <p class="network-title">Приєднуйтесь</p>
+            <ul class="footer-network">
+              <li class="footer-network item">
+                <a class="footer-network-link" href="">
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/icon.svg#icon-instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="item">
-                <a href="mailto:info@devstudio.com" class="link"
-                  >info@devstudio.com</a
-                >
+              <li class="footer-network item">
+                <a class="footer-network-link" href=""
+                  ><svg class="icon" width="20" height="20">
+                    <use href="./images/icon.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li>
-                <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+              <li class="footer-network item">
+                <a class="footer-network-link" href="">
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/icon.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-network item">
+                <a class="footer-network-link" href="">
+                  <svg class="icon" width="20" height="20">
+                    <use href="./images/icon.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
-        </div>
-        <div class="network">
-          <p class="network-title">Приєднуйтесь</p>
-          <ul class="footer-network">
-            <li class="footer-network item">
-              <a class="footer-network-link" href="">
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/icon.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-network item">
-              <a class="footer-network-link" href=""
-                ><svg class="icon" width="20" height="20">
-                  <use href="./images/icon.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-network item">
-              <a class="footer-network-link" href="">
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/icon.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-network item">
-              <a class="footer-network-link" href="">
-                <svg class="icon" width="20" height="20">
-                  <use href="./images/icon.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          </div>
         </div>
         <div class="mailing">
           <p class="mailing-text">Підпишіться на розсилку</p>
@@ -422,7 +479,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="btn-modal" data-modal-close>
@@ -501,5 +558,6 @@
       </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

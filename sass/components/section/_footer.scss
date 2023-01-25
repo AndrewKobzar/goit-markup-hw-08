@@ -1,18 +1,25 @@
-.footer a {
-  margin-left: 15px;
-}
-.footer-adress {
-  margin-right: 70px;
-}
+
+
 .footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
   & .flex {
-    display: flex;
-    align-items: baseline;
+    display: block;
+    text-align: center;
+    @media screen and (min-width: 1200px) { 
+      display: flex;
+      text-align: left;
+      }
   }
 }
+
+
+.footer-adress {
+  @media screen and (min-width: 1200px) { 
+    text-align: left;
+    }
+} 
 
 .logo-footer {
   display: inline-block;
@@ -54,9 +61,32 @@
 .adress {
   font-style: normal;
 }
+.footer-flex {
+  @media screen and (min-width: 768px) { 
+    display: flex;
+    justify-content: center;
+    }
+    @media screen and (min-width: 768px) { 
+      display: flex;
+  
+      }
+  
+  }
 
 .network {
-  margin-right: 93px;
+  // margin-right: 93px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px){
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 165px;
+  }
+  @media screen and (min-width: 1200px){
+    margin-right: 93px;
+    margin-left: 70px;
+  }
+
 }
 
 .network-title {
@@ -65,7 +95,6 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: $secondary-color;
 }
 
@@ -106,6 +135,17 @@
   }
 }
 
+
+.mailing {
+  @media screen and (min-width: 768px){
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px){
+    margin-top: 0;
+
+    }
+}
+
 .mailing-text {
   font-weight: 700;
   font-size: 14px;
@@ -117,12 +157,17 @@
 }
 
 .mailing-list {
-  display: flex;
+  display: block;
   gap: 12px;
+
+  @media screen and (min-width: 1200px){
+    display: flex;
+  }
+  
 }
 
 .mailing-input {
-  width: 358px;
+  width: 450px;
   height: 50px;
   outline: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -134,6 +179,11 @@
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: 1200px){
+    width: 358px;;
+  }
+
   &::placeholder {
     font-weight: 400;
     font-size: 16px;
@@ -156,9 +206,16 @@
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: $secondary-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 20px;
+ 
+    @media screen and (min-width: 1200px){
+      margin-top: 0;
+      position: static;
+      transform: none;
+      }
   .icon {
     fill: $secondary-color;
     margin-left: 10px;

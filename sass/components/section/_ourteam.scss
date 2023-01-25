@@ -1,9 +1,11 @@
 .command {
   background: #f5f4fa;
-  padding: 60px 15px;
-  @media screen and (min-widht: 1200px) { 
-    padding: 94px 215px;
-      }
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) { 
+    padding-top: 94px;
+    padding-bottom: 94px;
+   }
 }
 
 .command-list {
@@ -21,13 +23,13 @@
 
 .command-item {
   background-color: $secondary-color;
-      @media screen and (min-widht: 480px) { 
-      width: 100%;
+      @media screen and (min-width: 480px) { 
+      max-width: 100%;
       }
-      @media screen and (min-widht: 768px) { 
+      @media screen and (min-width: 768px) { 
       width: calc((100% - 30px) / 2);
       }    
-      @media screen and (min-widht: 1200px) { 
+      @media screen and (min-width: 1200px) { 
       width: calc((100% - 90px) / 4);
         }
   &:first-child {

@@ -1,3 +1,18 @@
+.client {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+
+.client-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+
 .client-title {
     font-size: 36px;
     line-height: 1.16;
@@ -5,12 +20,7 @@
     color: $primary-text-color;
   }
   
-  .client-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-  }
+
   
   .client-link {
     width: 170px;
