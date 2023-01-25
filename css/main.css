@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
@@ -107,6 +108,7 @@ img {
 @media screen and (min-width: 768px) {
   .nav {
     display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -153,7 +155,7 @@ img {
   margin-right: 50px;
 }
 .site-nav .item:last-child {
-  margin-right: 96px;
+  margin-right: 0;
 }
 
 .site-nav .link {
@@ -188,7 +190,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-content: center;
-  margin-left: auto;
+  margin-left: 81px;
   gap: 10px;
 }
 @media screen and (min-width: 1200px) {
@@ -241,14 +243,9 @@ img {
 }
 
 .mob-menu-close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  border: none;
   position: absolute;
   top: 20px;
   right: 20px;
@@ -296,7 +293,7 @@ img {
 .mob-auth-nav .link-tel {
   font-weight: 500;
   font-size: 34px;
-  line-height: 40px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196F3;
 }
@@ -304,7 +301,7 @@ img {
 .mob-auth-nav .link-mail {
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
 }
@@ -344,6 +341,7 @@ img {
 .mob-soc-list {
   margin-top: 64px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .mob-soc-link {
@@ -351,6 +349,10 @@ img {
   font-size: 18px;
   line-height: 1.22;
   letter-spacing: 0.02em;
+  color: #2196F3;
+}
+
+.mob-nav-item .current {
   color: #2196F3;
 }
 
@@ -371,6 +373,7 @@ img {
   background: #2f303a;
   padding-top: 118px;
   padding-bottom: 118px;
+  min-width: 320px;
   max-width: 1600px;
   background-position: center;
   background-size: cover;
@@ -625,6 +628,11 @@ img {
   margin-top: 30px;
   gap: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .command-list {
+    margin-top: 50px;
+  }
+}
 
 .command-item {
   background-color: #ffffff;
@@ -720,6 +728,12 @@ img {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+@media screen and (min-width: 1200px) {
+  .client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .client-list {
   display: flex;
@@ -737,7 +751,7 @@ img {
 }
 
 .client-link {
-  width: 170px;
+  width: 210px;
   height: 92px;
   display: flex;
   align-items: center;
@@ -745,6 +759,16 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .client-link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-link {
+    width: 170px;
+  }
 }
 .client-link:hover {
   border: 1px solid #2196f3;
@@ -929,7 +953,8 @@ img {
 }
 
 .mailing-input {
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   height: 50px;
   outline: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1120,13 +1145,20 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  max-width: 450px;
+  width: 100%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 528px;
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .btn-modal {
@@ -1165,6 +1197,14 @@ button {
   line-height: 23px;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+.modal-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
 }
 
 .modal-input {
@@ -1282,6 +1322,47 @@ button {
 }
 .window:focus + .icon-mod {
   fill: #2196f3;
+}
+
+.window::-moz-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.window:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.window::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+@media screen and (min-width: 1200px) {
+  .window::-moz-placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .window:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+  .window::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
 .modal-text {

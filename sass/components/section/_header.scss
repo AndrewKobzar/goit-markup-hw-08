@@ -7,6 +7,7 @@
     align-items: center;
     @media screen and (min-width: 768px) { 
       display: flex;
+      justify-content: space-between;
       }    
     
   }
@@ -55,7 +56,7 @@
     position: relative;
     margin-right: 50px;
     &:last-child {
-        margin-right: 96px;
+        margin-right: 0;
       }
       
   } 
@@ -93,8 +94,9 @@
   display: flex;
   flex-wrap: wrap; 
   align-content: center;
-  margin-left: auto;
+  margin-left: 81px;
   gap: 10px;
+
   @media screen and (min-width: 1200px){
     display: flex;
     flex-wrap: nowrap;
@@ -141,14 +143,9 @@ right: 10px;
   }
 
   .mob-menu-close {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     background-color: transparent;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    border: none;
     position: absolute;
     top: 20px;
     right: 20px;
@@ -200,7 +197,7 @@ color: #212121;
   .mob-auth-nav .link-tel {
     font-weight: 500;
 font-size: 34px;
-line-height: 40px;
+line-height: 1.17;
 letter-spacing: 0.02em;
 
 color: #2196F3;
@@ -209,7 +206,7 @@ color: #2196F3;
   .mob-auth-nav .link-mail {
     font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.16;
     letter-spacing: 0.02em;
     
     color: #757575;
@@ -250,6 +247,7 @@ color: #2196F3;
   .mob-soc-list {
     margin-top: 64px;
     display: flex;
+    flex-wrap: wrap;
   }
 
   .mob-soc-link {
@@ -258,6 +256,9 @@ font-size: 18px;
 line-height: 1.22;
 letter-spacing: 0.02em;
 color: #2196F3;
+  }
+  .mob-nav-item .current {
+    color: #2196F3;
   }
 
   .mob-soc-link::after {
