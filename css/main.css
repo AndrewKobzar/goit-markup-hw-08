@@ -254,6 +254,10 @@ img {
   right: 20px;
 }
 
+.mob-menu-close:hover .icon-menu-close {
+  fill: #2196F3;
+}
+
 .mob-menu {
   position: fixed;
   left: 0;
