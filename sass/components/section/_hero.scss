@@ -13,12 +13,30 @@
         rgba(47, 48, 58, 0.4)
       ),
       url("../images/bg-tel.jpg");
+      @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/bg-tel-2x.jpg");
+}
       @media screen and (min-width: 768px) { 
         background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
         url("../images/bg-tab.jpg");
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+          background-image: linear-gradient(
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/bg-tab-2x.jpg");
+      }
 
         } 
         @media screen and (min-width: 1200px) { 
@@ -29,6 +47,15 @@
           url("../images/fon.jpg");
           padding-top: 200px;
           padding-bottom: 200px;
+          @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+            background-image: linear-gradient(
+              rgba(47, 48, 58, 0.4),
+              rgba(47, 48, 58, 0.4)
+            ),
+            url("../images/bg-2x.jpg");
+        }
           } 
       &__title {
         color: $secondary-color;
