@@ -1044,8 +1044,8 @@ img {
 .filter {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .filter .filter-button {
   display: inline-block;
