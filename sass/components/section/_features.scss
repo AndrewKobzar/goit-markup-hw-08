@@ -1,19 +1,16 @@
-.features {
+.section.features {
   margin: 0;
+  padding-bottom: 60px;
+    padding-top: 60px;
 
-    @media screen and (min-width: 768px) {
-      padding-bottom: 60px;
-       padding-top: 60px;
-     }
-     @media screen and (min-width: 480px) {
-       padding-bottom: 60px;
-       padding-top: 60px;
-     }
+   
      @media screen and (min-width:1200px) {
       padding-bottom: 0;
       padding-top: 94px;
     }
-    &__title {
+    
+    }
+    .features__title {
       position: absolute;
       white-space: nowrap;
       width: 1px;
@@ -25,9 +22,8 @@
       clip-path: inset(50%);
       margin: -1px;
     }
-  }
   
-  .grid {
+    .grid {
     display: flex;
     flex-wrap: wrap;
     align-items:baseline;

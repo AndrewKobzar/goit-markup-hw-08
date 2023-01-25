@@ -450,27 +450,18 @@ img {
   background-color: #188ce8;
 }
 
-.features {
+.section.features {
   margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .features {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
-}
-@media screen and (min-width: 480px) {
-  .features {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 @media screen and (min-width: 1200px) {
-  .features {
+  .section.features {
     padding-bottom: 0;
     padding-top: 94px;
   }
 }
+
 .features__title {
   position: absolute;
   white-space: nowrap;
@@ -619,15 +610,21 @@ img {
 
 .command-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   text-align: center;
-  align-items: center;
-  justify-content: center;
   background: #f5f4fa;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
   gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .command-list {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 @media screen and (min-width: 1200px) {
   .command-list {
@@ -659,10 +656,15 @@ img {
 
 .command-title {
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #212121;
+}
+@media screen and (min-width: 1200px) {
+  .command-title {
+    font-size: 36px;
+  }
 }
 
 .command-border {
@@ -745,14 +747,33 @@ img {
 }
 
 .client-title {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #212121;
 }
+@media screen and (min-width: 1200px) {
+  .client-title {
+    font-size: 36px;
+  }
+}
+
+.client-item {
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .client-item {
+    width: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client-item {
+    width: calc((100% - 150px) / 6);
+  }
+}
 
 .client-link {
-  width: 210px;
+  width: 100%;
   height: 92px;
   display: flex;
   align-items: center;
@@ -760,16 +781,6 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-@media screen and (min-width: 768px) {
-  .client-link {
-    width: 226px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .client-link {
-    width: 170px;
-  }
 }
 .client-link:hover {
   border: 1px solid #2196f3;
@@ -1010,7 +1021,9 @@ img {
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: #ffffff;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
@@ -1158,7 +1171,7 @@ button {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    max-width: 450px;
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {

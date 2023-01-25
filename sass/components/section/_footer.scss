@@ -209,7 +209,9 @@
   line-height: 1.88;
   letter-spacing: 0.06em;
   color: $secondary-color;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 margin-left: auto;
 margin-right: auto;
 margin-top: 20px;
