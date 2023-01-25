@@ -241,8 +241,14 @@ img {
 }
 
 .mob-menu-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
-  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   position: absolute;
   top: 20px;
   right: 20px;
