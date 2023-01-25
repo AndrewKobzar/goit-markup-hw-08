@@ -7,7 +7,6 @@
     align-items: center;
     @media screen and (min-width: 768px) { 
       display: flex;
-      justify-content: space-between;
       }    
     
   }
@@ -101,6 +100,7 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 30px;
+    margin-left: auto;
   }
   & .link {
     display: flex;
@@ -196,7 +196,7 @@ color: #212121;
 
   .mob-auth-nav .link-tel {
     font-weight: 500;
-font-size: 34px;
+font-size: 27px;
 line-height: 1.17;
 letter-spacing: 0.02em;
 
