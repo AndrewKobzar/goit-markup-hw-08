@@ -1,5 +1,6 @@
 .filter {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     & .filter-button {
@@ -36,7 +37,19 @@
         margin-right: 0px;
       }
   }
+  .filter .filter-item:nth-last-child(-n+3) {
+    margin-top: 15px;
+    @media screen and (min-width: 376px) {
+      margin-top: 0;
+    }
+  } 
 
+  .filter .filter-item:nth-last-child(-n+2) {
+    margin-top: 15px;
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+  } 
 
 
   

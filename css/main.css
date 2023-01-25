@@ -257,6 +257,7 @@ img {
 
 .mob-menu {
   position: fixed;
+  z-index: 3;
   left: 0;
   top: 0;
   width: 100vw;
@@ -1042,6 +1043,7 @@ img {
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -1074,6 +1076,24 @@ img {
   margin-right: 0px;
 }
 
+.filter .filter-item:nth-last-child(-n+3) {
+  margin-top: 15px;
+}
+@media screen and (min-width: 376px) {
+  .filter .filter-item:nth-last-child(-n+3) {
+    margin-top: 0;
+  }
+}
+
+.filter .filter-item:nth-last-child(-n+2) {
+  margin-top: 15px;
+}
+@media screen and (min-width: 768px) {
+  .filter .filter-item:nth-last-child(-n+2) {
+    margin-top: 0;
+  }
+}
+
 .view {
   font-size: 16px;
   line-height: 1.87;
@@ -1083,9 +1103,17 @@ img {
 
 .examples {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
   margin-top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .examples {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .examples-border {
@@ -1101,17 +1129,20 @@ img {
 }
 
 .inform {
-  margin-right: 30px;
-  margin-bottom: 30px;
+  max-width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .inform {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .inform {
+    width: calc((100% - 60px) / 3);
+  }
 }
 .inform:hover, .informfocus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.inform:nth-child(3n) {
-  margin-right: 0;
-}
-.inform:nth-last-child(-n+3) {
-  margin-bottom: 0;
 }
 .inform:hover .overlay {
   transform: translateY(0);
