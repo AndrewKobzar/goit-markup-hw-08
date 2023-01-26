@@ -744,7 +744,12 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .client-list {
+    margin-top: 50px;
+  }
 }
 
 .client-title {
